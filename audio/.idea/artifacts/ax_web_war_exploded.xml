@@ -7,6 +7,18 @@
           <element id="module-output" name="ax-web" />
         </element>
         <element id="directory" name="lib">
+          <element id="archive" name="ax-service-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="ax-service" />
+          </element>
+          <element id="archive" name="ax-dao-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="ax-dao" />
+          </element>
+          <element id="archive" name="ax-utils-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="ax-utils" />
+          </element>
+          <element id="archive" name="ax-pojo-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="ax-pojo" />
+          </element>
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />

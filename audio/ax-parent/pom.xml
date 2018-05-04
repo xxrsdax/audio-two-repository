@@ -240,11 +240,13 @@
 
     <!--子模块-->
     <modules>
-        <!--<module>ax-pojo</module>-->
-        <!--<module>ax-dao</module>-->
-        <!--<module>ax-service</module>-->
+
         <module>ax-web</module>
-        <!--<module>ax-utils</module>-->
+        <module>ax-pojo</module>
+        <module>ax-utils</module>
+        <module>ax-dao</module>
+        <module>ax-service</module>
+
     </modules>
 
 </project>

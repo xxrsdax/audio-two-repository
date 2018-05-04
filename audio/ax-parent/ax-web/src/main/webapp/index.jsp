@@ -18,11 +18,9 @@
 <body>
 <input type="button" value="切换" id="change">
 <select id="musicMenu">
-    <option value="1.ogg" selected>1.ogg</option>
-    <option value="2.ogg">2.ogg</option>
-    <option value="3.ogg">3.ogg</option>
+
 </select>
-<audio id="audio" src="audio/admin/1.ogg" loop autoplay  >
+<audio id="audio" src="/audioFile/1.ogg" loop autoplay   >
     此浏览器的版本不支持或该浏览器不支持
 </audio>
 <script type="text/javascript">
@@ -30,8 +28,14 @@
         $("#change").click(function () {
             var music2  =  $("#musicMenu").val();  //获取select中被选中的option的value
 
-            $("#audio").attr("src","audio/admin/"+music2);  //设置audio中的src的属性
+            $("#audio").attr("src","/audioFile/"+music2);  //设置audio中的src的属性
         });
+
+        $.post("json/aduioFilename/audioFilename.json",function (data) {
+            for(var  i = 0;i<data.length ;i++) {
+                $("#musicMenu").append('<option value="'+data[i].value+'">'+data[i].text+'</option>');
+            }
+        },"json");
     });
 </script>
 </body>
